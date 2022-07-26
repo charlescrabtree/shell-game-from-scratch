@@ -6,22 +6,64 @@
 
 body {
     height: 100vh;
-    font-family: 'Rubik', san-serif;
-    background: var(--background);
+    font-family: 'Gothic', san-serif;
+    
     display: grid;
     grid-template-rows: auto 1fr auto;
 }
 
 header {
-    position: sticky;
+    position: relative;
     top: 0;
     display: flex;
     align-items: center;
-    background-color: var(--header-background);
+    justify-content: center;
+    
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
 }
 
 main {
     padding: 20px;
+}
+
+.opening {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+.doors {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+#wood-door {
+    object-fit: fill;
+}
+
+#stone-door {
+    object-fit: cover;
+}
+
+#vault-door {
+    object-fit: cover;
+}
+
+.fate {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    padding: 5px;
+    border: solid black;
 }
 
 footer {
@@ -31,5 +73,4 @@ footer {
     font-size: .8em;
     display: flex;
     justify-content: flex-end;
-    background-color: var(--footer-background);
 }

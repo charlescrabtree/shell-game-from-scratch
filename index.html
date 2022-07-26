@@ -12,20 +12,45 @@
         href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;600&family=Titillium+Web:wght@200;400;600&display=swap">
     <link rel="stylesheet" href="/styles/reset.css" />
     <link rel="stylesheet" href="/styles/global.css" />
-    <title>Web App</title>
+    <title>Dragon Adoption Center</title>
 </head>
 
 <body>
     <header>
-        <img src="/assets/html_css_js.png">
-        <h1>Web App</h1>
+        <h1>Welcome to the Dragon Adoption Center</h1>
     </header>
 
     <main>
-
+        <div class="opening">
+            <p>First, you must name your dragon. If your dragon's name is good <br>
+            then the dragon shall be yours.</p>
+            <input type="text">
+            <button id="dragon name">The doors shall decide</button>
+        <p>Find your dragon.</p>
+        </div>
+        <div class="doors">
+            <div id="wood-door">
+                <img src="./assets/wood-door.jpg">
+                <button class="buttons" id="wood-button">Maybe here?</button>
+            </div>
+            <div id="vault-door">
+                <img src="./assets/vault-door.jpg">
+                <button class="buttons" id="vault-button">Or here?</button>
+            </div>
+            <div id="stone-door">
+                <img src="./assets/stone-door.jpg">
+                <button class="buttons" id="stone-button">Are you certain?</button>
+            </div>
+        </div>
+        <div class="fate">
+            <div>Dragons adopted<span id="adoptions">0</span></div>
+            <div>Dragons discarded<span id="discards">0</span></div>
+            <div>Total<span id="total">0</span></div>
+        </div>
     </main>
 
-    <footer>&copy;2022 Software Developer</footer>
+    <footer>&copy;2022 Dovahteam Software</footer>
+    
 
     <script type="module" src="app.js"></script>
 </body>
