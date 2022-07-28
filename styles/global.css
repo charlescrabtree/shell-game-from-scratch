@@ -7,9 +7,10 @@
 body {
     height: 100vh;
     font-family: 'Gothic', san-serif;
-    
-    display: grid;
-    grid-template-rows: auto 1fr auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
 }
 
 header {
@@ -35,26 +36,15 @@ main {
 .opening {
     display: grid;
     justify-content: center;
+    justify-items: center;
     align-items: center;
 }
 
 .doors {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    
-}
-
-#wood-door {
-    object-fit: fill;
-}
-
-#stone-door {
-    object-fit: cover;
-}
-
-#vault-door {
-    object-fit: cover;
+    margin-bottom: 15px;
+    /* justify-content: center; */
+    /* align-items: center;    */
 }
 
 .fate {
@@ -73,4 +63,8 @@ footer {
     font-size: .8em;
     display: flex;
     justify-content: flex-end;
+}
+
+img {
+    width: 200px;
 }

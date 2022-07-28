@@ -20,7 +20,9 @@ let total = 0
 
 // set event listeners
 
-woodButton.addEventListener('click', )
+woodButton.addEventListener('click', () => {
+    const 
+})
 
   // get user input
   // use user input to update state 
