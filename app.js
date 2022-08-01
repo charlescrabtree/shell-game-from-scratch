@@ -14,6 +14,12 @@ let adoptions = 0;
 let discards = 0;
 let total = 0;
 
+function getRandomItem(arr) {
+    const index = Math.floor(Math.random() * 3);
+
+    return arr[index];
+}
+
 function resetImages() {
     woodImg.src = './assets/wood-door.jpg';
     stoneImg.src = './assets/wood-door.jpg';
@@ -21,32 +27,22 @@ function resetImages() {
 }
 
 woodButton.addEventListener('click', () => {
-    resetImages();
-    total++;
-    const hidingSpot = Math.floor(Math.random() * 3);
-    const answer = hidingSpots[hidingSpot];
+    
+    const answer = getRandomItem(hidingSpots);
 
     handleGuess(answer, 'wood-img');
 });
 
 stoneButton.addEventListener('click', () => {
-    resetImages();
-    total++;
 
-    const hidingSpot = Math.floor(Math.random() * 3);
-    
-    const answer = hidingSpots[hidingSpot];
+    const answer = getRandomItem(hidingSpots);
     
     handleGuess(answer, 'stone-img');
 });
 
 vaultButton.addEventListener('click', () => {
-    resetImages();
-    total++;
 
-    const hidingSpot = Math.floor(Math.random() * 3);
-    
-    const answer = hidingSpots[hidingSpot];
+    const answer = getRandomItem(hidingSpots);
     
     handleGuess(answer, 'vault-img');
 });
@@ -54,6 +50,10 @@ vaultButton.addEventListener('click', () => {
 
 
 function handleGuess(correctSpot, userGuess) {
+
+    resetImages();
+
+    total++;
 
     correctSpot.src = './assets/baby-dragon.jpg';
 
